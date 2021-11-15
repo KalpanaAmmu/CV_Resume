@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dowload</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <th>Dowload the Bill</th>
+                <tr>
+                    <td>ProductName</td>
+                    <td>DowloadPdf</td>
+                </tr>
+                {% for de1 in de %}
+                <tr>
+                    <td>{{de1.pro_name}}</td>
+                    <td><a class="btn btn-success"href="{% url 'detail' de1.id %}">Dowload</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>    
+</body>
+</html>
